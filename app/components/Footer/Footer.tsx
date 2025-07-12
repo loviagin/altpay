@@ -28,6 +28,9 @@ export default function Footer() {
               <a href="https://find-and-update.company-information.service.gov.uk/company/16203160" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
                 🏢 Проверить регистрацию
               </a>
+              <a href="https://lovigin.com" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
+                🌐 Официальный сайт
+              </a>
             </div>
           </div>
           
