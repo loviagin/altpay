@@ -33,12 +33,14 @@ export default function Reviews() {
   // Определяем количество видимых карточек в зависимости от размера экрана
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 480) {
-        setVisibleCards(1);
-      } else if (window.innerWidth <= 768) {
-        setVisibleCards(2);
-      } else {
-        setVisibleCards(3);
+      if (typeof window !== 'undefined') {
+        if (window.innerWidth <= 480) {
+          setVisibleCards(1);
+        } else if (window.innerWidth <= 768) {
+          setVisibleCards(2);
+        } else {
+          setVisibleCards(3);
+        }
       }
     };
 
@@ -65,12 +67,14 @@ export default function Reviews() {
 
   // Calculate transform based on card width and gap
   const getCardWidth = () => {
+    if (typeof window === 'undefined') return 350; // Default for SSR
     if (window.innerWidth <= 480) return 260;
     if (window.innerWidth <= 768) return 280;
     return 350;
   };
 
   const getGap = () => {
+    if (typeof window === 'undefined') return 32; // Default for SSR
     if (window.innerWidth <= 480) return 12; // 0.75rem
     if (window.innerWidth <= 768) return 16; // 1rem
     return 32; // 2rem
@@ -86,7 +90,7 @@ export default function Reviews() {
       <div className={styles.container}>
         <h2 className={styles.title}>Отзывы клиентов</h2>
         <p className={styles.subtitle}>
-          Что говорят о нас пользователи
+          После оставления заявки и вы сможете оставить отзыв о нас!
         </p>
         
         <div className={styles.carouselContainer}>
