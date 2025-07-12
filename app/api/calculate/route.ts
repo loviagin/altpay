@@ -55,7 +55,9 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     const { amount, service } = body;
-    
+      
+    const orderId = Math.floor(1000 + Math.random() * 89999).toString();
+      
     if (!amount || typeof amount !== 'number' || amount <= 0) {
       return NextResponse.json(
         { error: 'Сумма должна быть больше 0' },
@@ -81,12 +83,20 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
+
+    // тут может быть вызов внешнего API или Redis (например, через fetch)
+    await fetch('http://localhost:8008/api/save-order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: orderId, amount, service }),
+      });
     
     return NextResponse.json({
       amount: amount,
       service: service,
       calculatedPrice: calculatedSum,
       finalPrice: finalPrice,
+      tgLink: `https://t.me/alt_pay_bot?start=order_${orderId}`,
       exchangeRates: {
         usdToKzt: USD_TO_KZT,
         bynToKzt: BYN_TO_KZT,

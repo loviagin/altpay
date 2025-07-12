@@ -8,6 +8,7 @@ interface CalculationResult {
   service: string;
   calculatedPrice: number;
   finalPrice: number;
+  tgLink: string;
   exchangeRates: {
     usdToKzt: number;
     bynToKzt: number;
@@ -172,7 +173,7 @@ export default function Calculator() {
                     Перейдите в Telegram для оформления заказа
                   </p>
                   <a 
-                    href="https://t.me/alt_pay_bot" 
+                    href={result.tgLink ? result.tgLink : 'https://t.me/alt_pay_bot'} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className={styles.telegramButton}
