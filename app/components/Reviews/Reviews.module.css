@@ -1,0 +1,439 @@
+.section {
+  padding: 6rem 0;
+  background: #f8fafc;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin: 0 0 1rem 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #64748b;
+  margin: 0 0 4rem 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  position: relative;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2rem;
+}
+
+.carouselButton {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #6b7280;
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.carouselButton:hover {
+  border-color: #667eea;
+  color: #667eea;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.carouselButton:active {
+  transform: scale(0.95);
+}
+
+.reviewsCarousel {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.reviewsTrack {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s ease;
+  width: fit-content;
+}
+
+.reviewCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  width: 350px;
+  flex-shrink: 0;
+}
+
+.reviewCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.reviewCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.username {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 1rem;
+}
+
+.stars {
+  color: #fbbf24;
+  font-size: 1rem;
+}
+
+.reviewText {
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #e5e7eb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot:hover {
+  background: #d1d5db;
+  transform: scale(1.2);
+}
+
+.activeDot {
+  background: #667eea;
+  transform: scale(1.2);
+}
+
+.telegramSection {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.telegramCard {
+  background: linear-gradient(135deg, #0088cc 0%, #00a8ff 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px -5px rgba(0, 136, 204, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.telegramCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="telegram" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23telegram)"/></svg>');
+  opacity: 0.3;
+}
+
+.telegramCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px -5px rgba(0, 136, 204, 0.5);
+}
+
+.telegramIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.telegramTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.telegramDescription {
+  font-size: 1rem;
+  margin: 0 0 2rem 0;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+}
+
+.telegramButton {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.telegramButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .carouselContainer {
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .carouselButton {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .reviewsCarousel {
+    padding: 0 0.5rem;
+  }
+  
+  .reviewsTrack {
+    gap: 1rem;
+  }
+  
+  .reviewCard {
+    padding: 1.5rem;
+    width: 280px;
+  }
+  
+  .reviewHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .username {
+    font-size: 0.9rem;
+  }
+  
+  .stars {
+    font-size: 0.9rem;
+  }
+  
+  .reviewText {
+    font-size: 0.9rem;
+  }
+  
+  .dots {
+    margin-bottom: 2rem;
+  }
+  
+  .telegramCard {
+    padding: 2rem 1.5rem;
+  }
+  
+  .telegramIcon {
+    font-size: 2.5rem;
+  }
+  
+  .telegramTitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 3rem 0;
+  }
+  
+  .container {
+    padding: 0 0.5rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .carouselContainer {
+    gap: 0.25rem;
+    padding: 0;
+  }
+  
+  .carouselButton {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .carouselButton svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .reviewsCarousel {
+    padding: 0 0.25rem;
+  }
+  
+  .reviewsTrack {
+    gap: 0.75rem;
+  }
+  
+  .reviewCard {
+    padding: 1.25rem;
+    width: 260px;
+    border-radius: 12px;
+  }
+  
+  .reviewHeader {
+    margin-bottom: 0.75rem;
+  }
+  
+  .username {
+    font-size: 0.85rem;
+  }
+  
+  .stars {
+    font-size: 0.85rem;
+  }
+  
+  .reviewText {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  
+  .dots {
+    margin-bottom: 1.5rem;
+    gap: 0.25rem;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .telegramCard {
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+  }
+  
+  .telegramIcon {
+    font-size: 2rem;
+  }
+  
+  .telegramTitle {
+    font-size: 1.1rem;
+  }
+  
+  .telegramDescription {
+    font-size: 0.9rem;
+  }
+  
+  .telegramButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .reviewCard {
+    width: 240px;
+    padding: 1rem;
+  }
+  
+  .username {
+    font-size: 0.8rem;
+  }
+  
+  .stars {
+    font-size: 0.8rem;
+  }
+  
+  .reviewText {
+    font-size: 0.8rem;
+  }
+} 
