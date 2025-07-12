@@ -1,9 +1,0 @@
-export { default as Header } from './Header/Header';
-export { default as Hero } from './Hero/Hero';
-export { default as HowItWorks } from './HowItWorks/HowItWorks';
-export { default as Calculator } from './Calculator/Calculator';
-export { default as Services } from './Services/Services';
-export { default as Trust } from './Trust/Trust';
-export { default as Reviews } from './Reviews/Reviews';
-export { default as FAQ } from './FAQ/FAQ';
-export { default as Footer } from './Footer/Footer';
