@@ -56,7 +56,7 @@ export default function Footer() {
           </div>
           <div className={styles.cta}>
             <a 
-              href="https://t.me/AltPayBot" 
+              href="https://t.me/alt_pay_bot" 
               target="_blank" 
               rel="noopener noreferrer"
               className={styles.ctaButton}
