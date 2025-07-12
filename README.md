@@ -1,0 +1,1 @@
+This is an [Alt Pay](https://altpay.lovigin.com)
