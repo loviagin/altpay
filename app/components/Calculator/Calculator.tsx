@@ -159,11 +159,11 @@ export default function Calculator() {
               <div className={styles.resultAmount}>
                 {result.finalPrice.toLocaleString('ru-RU')} ₽
               </div>
-              <div className={styles.resultBreakdown}>
+              {/* <div className={styles.resultBreakdown}>
                 <div>Курс USD/KZT: {result.exchangeRates.usdToKzt}</div>
                 <div>Курс BYN/KZT: {result.exchangeRates.bynToKzt}</div>
                 <div>Курс RUB/BYN: {result.exchangeRates.rubToByn}</div>
-              </div>
+              </div> */}
               
               <div className={styles.telegramSection}>
                 <div className={styles.telegramCard}>
