@@ -85,11 +85,11 @@ export async function POST(request: NextRequest) {
     }
 
     // тут может быть вызов внешнего API или Redis (например, через fetch)
-    await fetch('http://localhost:8008/api/save-order', {
+    void fetch('http://localhost:8008/api/save-order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id: orderId, amount, service }),
-      });
+      }).catch(() => {});
     
     return NextResponse.json({
       amount: amount,
